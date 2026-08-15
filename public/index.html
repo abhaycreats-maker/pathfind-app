@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PathFind — Find your career, for real</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient background blobs (signature glow) -->
+  <div class="bg-scene" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="grain"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="logo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#logoGrad)"/>
+        <defs><linearGradient id="logoGrad" x1="2" y1="2" x2="22" y2="22">
+          <stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#22d3ee"/>
+        </linearGradient></defs>
+      </svg>
+      Path<span>Find</span>
+    </div>
+    <div class="auth-area" id="auth-area">
+      <button class="btn btn-ghost btn-small" id="btn-login-open">Log in</button>
+    </div>
+  </header>
+
+  <main id="app">
+
+    <!-- SCREEN 0: HERO -->
+    <section class="screen active" id="screen-hero">
+      <div class="hero-wrap">
+        <p class="eyebrow">for students who need direction</p>
+        <h1 class="hero-title">Stop guessing<br/>your <span class="grad-text">future.</span></h1>
+        <p class="hero-sub">Pick your stream, your interest, and Govt or Private — get the real exam, syllabus, salary and scope. No sugarcoating.</p>
+
+        <div class="path-track" aria-hidden="true">
+          <div class="path-node">Stream</div>
+          <div class="path-line"></div>
+          <div class="path-node">Interest</div>
+          <div class="path-line"></div>
+          <div class="path-node">Gov / Pvt</div>
+          <div class="path-line"></div>
+          <div class="path-node glow">Your Path</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="btn-start-guided">
+            I know my stream <span class="arrow">→</span>
+          </button>
+          <button class="btn btn-ghost" id="btn-start-chat">
+            😵‍💫 I'm confused, help me
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 1: STREAM SELECT -->
+    <section class="screen" id="screen-stream">
+      <div class="card-panel">
+        <p class="step-label">Step 1 / 3</p>
+        <h2>Which stream are you in?</h2>
+        <div class="chip-grid" id="stream-list"><!-- filled by JS --></div>
+        <button class="btn btn-text" data-back="screen-hero">← back</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: INTEREST SELECT -->
+    <section class="screen" id="screen-interest">
+      <div class="card-panel">
+        <p class="step-label">Step 2 / 3</p>
+        <h2>What excites you the most?</h2>
+        <div class="chip-grid" id="interest-list"><!-- filled by JS --></div>
+        <button class="btn btn-text" data-back="screen-stream">← back</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: MODE SELECT -->
+    <section class="screen" id="screen-mode">
+      <div class="card-panel">
+        <p class="step-label">Step 3 / 3</p>
+        <h2>Government or Private sector?</h2>
+        <p class="muted">Not sure? Pick "Show me both" — totally fine.</p>
+        <div class="mode-grid">
+          <button class="mode-card" data-mode="government">
+            <span class="mode-emoji">🏛️</span>
+            <span class="mode-title">Government</span>
+            <span class="mode-desc">Stability, pension, prestige</span>
+          </button>
+          <button class="mode-card" data-mode="private">
+            <span class="mode-emoji">🚀</span>
+            <span class="mode-title">Private</span>
+            <span class="mode-desc">Faster growth, higher ceiling</span>
+          </button>
+          <button class="mode-card" data-mode="both">
+            <span class="mode-emoji">🎯</span>
+            <span class="mode-title">Show me both</span>
+            <span class="mode-desc">Compare everything</span>
+          </button>
+        </div>
+        <button class="btn btn-text" data-back="screen-interest">← back</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 4: RESULTS -->
+    <section class="screen" id="screen-results">
+      <div class="results-wrap">
+        <p class="step-label" id="results-breadcrumb"></p>
+        <h2>Here's your path</h2>
+        <div class="results-grid" id="results-grid"><!-- filled by JS --></div>
+        <div class="results-actions">
+          <button class="btn btn-primary" id="btn-save-result">💾 Save this path</button>
+          <button class="btn btn-ghost" id="btn-restart">Start over</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN: LOGIN / SIGNUP -->
+    <section class="screen" id="screen-auth">
+      <div class="card-panel auth-panel">
+        <p class="step-label" id="auth-mode-label">Log in</p>
+        <h2 id="auth-title">Welcome back</h2>
+        <p class="muted">Save your results and come back to them anytime.</p>
+
+        <input type="email" id="auth-email" class="text-input" placeholder="Email" autocomplete="email" />
+        <input type="password" id="auth-password" class="text-input" placeholder="Password" autocomplete="current-password" />
+        <p class="auth-error" id="auth-error"></p>
+
+        <button class="btn btn-primary" id="btn-auth-submit" style="width:100%; margin-bottom:12px;">Log in</button>
+        <button class="btn btn-ghost" id="btn-google" style="width:100%; margin-bottom:12px;">Continue with Google</button>
+
+        <p class="muted" style="text-align:center; margin-top:8px;">
+          <span id="auth-toggle-text">Don't have an account?</span>
+          <a href="#" id="auth-toggle-link">Sign up</a>
+        </p>
+        <button class="btn btn-text" data-back="screen-hero">← back</button>
+      </div>
+    </section>
+
+    <!-- SCREEN: MY SAVED PATHS -->
+    <section class="screen" id="screen-saved">
+      <div class="results-wrap">
+        <p class="step-label">Your account</p>
+        <h2>Saved paths</h2>
+        <div class="results-grid" id="saved-grid"><!-- filled by JS --></div>
+        <button class="btn btn-text" data-back="screen-hero">← back</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 5: AI CHAT (for confused students) -->
+    <section class="screen" id="screen-chat">
+      <div class="chat-panel">
+        <p class="step-label">AI Career Buddy</p>
+        <h2>Let's figure this out together</h2>
+        <div class="chat-window" id="chat-window"></div>
+        <div class="chat-input-row">
+          <input type="text" id="chat-input" placeholder="Type your answer..." autocomplete="off" />
+          <button id="chat-send" class="btn btn-primary btn-small">Send</button>
+        </div>
+        <button class="btn btn-text" data-back="screen-hero">← back</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Feedback widget -->
+  <button id="feedback-fab" title="Give feedback">💬</button>
+  <div id="feedback-modal" class="feedback-modal hidden">
+    <div class="feedback-box">
+      <h3>Kaisa laga PathFind?</h3>
+      <div class="star-row" id="star-row">
+        <span data-star="1">⭐</span><span data-star="2">⭐</span><span data-star="3">⭐</span><span data-star="4">⭐</span><span data-star="5">⭐</span>
+      </div>
+      <textarea id="feedback-text" class="text-input" placeholder="Kya achha laga, kya confusing tha, kya add karu?" rows="3"></textarea>
+      <button class="btn btn-primary" id="feedback-submit" style="width:100%">Submit</button>
+      <button class="btn btn-text" id="feedback-close">Close</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

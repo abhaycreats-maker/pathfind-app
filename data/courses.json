@@ -1,0 +1,484 @@
+{
+  "streams": [
+    {
+      "id": "science-pcm",
+      "name": "Science (PCM)",
+      "interests": [
+        {
+          "id": "engineering",
+          "name": "Engineering & Technology",
+          "careers": [
+            {
+              "title": "Software / Computer Engineer",
+              "mode": "private",
+              "exam": "JEE Main + JEE Advanced (for IITs) or state CETs for B.Tech CSE/IT",
+              "syllabus": "4-year B.Tech: Programming, DSA, Computer Networks, DBMS, OS, AI/ML electives",
+              "scope": "IT services, product companies, startups, freelancing, remote global jobs",
+              "salary_entry": "₹4-12 LPA",
+              "salary_senior": "₹25 LPA - ₹1 Cr+ (product companies, abroad)",
+              "future": "High demand, AI/ML and cloud skills increasing value further",
+              "example": "Basically the person who fixes it when the app crashes at 2 AM and everyone's yelling in the group chat. Also the person who gets paid the most to say 'it's not a bug, it's a feature.' 💻",
+              "description": "Day-to-day, you write and test code, fix bugs, attend daily stand-up meetings, and build features for websites/apps. Most work is on a laptop, often remote-friendly, in small teams."
+            },
+            {
+              "title": "Government Engineer (PSU / Railways / Defence)",
+              "mode": "government",
+              "exam": "GATE (for PSUs like ONGC, NTPC), SSC JE, RRB JE, ESE (Engineering Services Exam via UPSC)",
+              "syllabus": "Core branch subjects (Mechanical/Civil/Electrical/CS) + General Studies for ESE",
+              "scope": "PSUs, Indian Railways, Defence R&D (DRDO), state engineering services",
+              "salary_entry": "₹6-9 LPA + govt perks (housing, pension)",
+              "salary_senior": "₹15-25 LPA at senior levels + full govt benefits",
+              "future": "Stable, less growth speed than private but high job security",
+              "example": "Think: the engineer who makes sure the train doesn't randomly decide to take a detour into a field. Job security level: 'even a zombie apocalypse probably won't fire you.' 🚂",
+              "description": "You inspect, maintain, and approve technical projects — could be checking railway tracks, running a power plant unit, or overseeing construction quality. Mix of desk work and on-site inspection."
+            },
+            {
+              "title": "Data Scientist / AI Engineer",
+              "mode": "private",
+              "exam": "B.Tech entrance (JEE) then specialization via electives/certifications",
+              "syllabus": "Statistics, Python, Machine Learning, Deep Learning, Data Engineering",
+              "scope": "Tech companies, fintech, healthcare AI, research labs",
+              "salary_entry": "₹6-15 LPA",
+              "salary_senior": "₹30 LPA - ₹80 LPA+",
+              "future": "One of the fastest growing fields globally, very high future scope",
+              "example": "The wizard behind Instagram knowing you want shoes before you do. Builds the algorithm, gets the LPA, occasionally questions if AI will take their own job someday. 🤖",
+              "description": "You analyze large datasets, build prediction models, and work closely with product teams to turn data into decisions — like figuring out which customers might cancel a subscription."
+            }
+          ]
+        },
+        {
+          "id": "defence-tech",
+          "name": "Defence & Government Technical Services",
+          "careers": [
+            {
+              "title": "NDA / Indian Armed Forces (Technical)",
+              "mode": "government",
+              "exam": "NDA exam (after 12th) or CDS (after graduation)",
+              "syllabus": "Maths, English, General Knowledge + SSB interview (personality assessment)",
+              "scope": "Army, Navy, Air Force technical branches",
+              "salary_entry": "₹8-10 LPA equivalent + allowances, housing, pension",
+              "salary_senior": "Senior officer ranks ₹2 LPA+/month + full benefits",
+              "future": "Respected career, stable, but demanding lifestyle",
+              "example": "Wakes up at 4 AM for a run while you're still dreaming about breakfast. Free housing, uniform swag, and the kind of respect that makes uncles at weddings salute you. 🫡",
+              "description": "Physical training, technical operations of equipment/vehicles/weapons systems, leading soldiers, and being posted to different locations across the country (or borders) every few years."
+            },
+            {
+              "title": "DRDO Scientist",
+              "mode": "government",
+              "exam": "DRDO SET / GATE-based recruitment",
+              "syllabus": "Core engineering subjects + specialization in defence tech",
+              "scope": "Missile tech, aerospace, weapons R&D",
+              "salary_entry": "₹7-10 LPA + govt benefits",
+              "salary_senior": "₹20 LPA+ at senior scientist levels",
+              "future": "Strong scope given India's defence push, prestigious",
+              "example": "Literally builds missiles for a living and still can't tell you why the wifi router in their own house doesn't work. 🚀",
+              "description": "Research and development on defence technology — could be missile systems, radar, or materials science. Lab-based work with long-term research projects, often classified."
+            }
+          ]
+        },
+        {
+          "id": "architecture",
+          "name": "Architecture & Design",
+          "careers": [
+            {
+              "title": "Architect",
+              "mode": "both",
+              "exam": "NATA or JEE Main Paper 2 (for B.Arch)",
+              "syllabus": "5-year B.Arch: Design studio, building construction, structures, urban planning",
+              "scope": "Private firms, own practice, government urban planning bodies (CPWD, town planning depts)",
+              "salary_entry": "₹3-8 LPA (private), ₹5-7 LPA (govt via CPWD)",
+              "salary_senior": "₹15-40 LPA (own practice can be much higher)",
+              "future": "Growing with urbanization, sustainable design is a rising niche",
+              "example": "The person your family calls when deciding 'kitchen idhar rakhe ya wahan.' Draws your dream house, then watches you change the plan five times. 🏗️",
+              "description": "You meet clients, design buildings/spaces, create blueprints using software like AutoCAD, visit construction sites, and coordinate with engineers and contractors."
+            }
+          ]
+        },
+        {
+          "id": "research",
+          "name": "Pure Science & Research",
+          "careers": [
+            {
+              "title": "Research Scientist (Physics/Chemistry/Maths)",
+              "mode": "government",
+              "exam": "IIT-JAM / CSIR-NET / GATE for M.Sc-PhD track, then ISRO/BARC/CSIR recruitment",
+              "syllabus": "B.Sc + M.Sc in core science, then PhD research",
+              "scope": "ISRO, BARC, CSIR labs, university research, teaching",
+              "salary_entry": "₹6-8 LPA (as junior scientist)",
+              "salary_senior": "₹18-25 LPA at senior scientist level",
+              "future": "India investing heavily in space & nuclear research, good long-term scope",
+              "example": "Sends rockets to the moon for less budget than a Bollywood movie. Low-key national hero, high-key still uses a 2015 laptop. 🛰️",
+              "description": "Lab experiments, data analysis, writing research papers, and presenting findings at conferences. Often based at a research institute or university, working on a specific research problem for years."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "science-pcb",
+      "name": "Science (PCB)",
+      "interests": [
+        {
+          "id": "medicine",
+          "name": "Medicine & Healthcare",
+          "careers": [
+            {
+              "title": "Doctor (MBBS)",
+              "mode": "both",
+              "exam": "NEET-UG (for MBBS admission), then NEET-PG for specialization",
+              "syllabus": "5.5 year MBBS: Anatomy, Physiology, Pathology, Clinical subjects + 1 year internship",
+              "scope": "Government hospitals, private hospitals, own clinic, specialization abroad",
+              "salary_entry": "₹6-10 LPA (govt resident), ₹8-15 LPA (private)",
+              "salary_senior": "₹25 LPA - ₹1 Cr+ (specialists, own practice)",
+              "future": "Always in demand, specialization (surgery, cardiology etc.) increases scope a lot",
+              "example": "The relative every family group chat forwards medical memes to for 'confirmation.' Saves lives, also somehow always on call during Diwali. 🩺",
+              "description": "Examining patients, diagnosing illnesses, prescribing treatment, performing procedures (depending on specialization), and long hospital shifts including night duty."
+            },
+            {
+              "title": "Government Medical Officer",
+              "mode": "government",
+              "exam": "NEET-UG + state PSC medical officer recruitment exams",
+              "syllabus": "MBBS + state health department protocols",
+              "scope": "Primary Health Centres, District Hospitals, Army Medical Corps",
+              "salary_entry": "₹7-9 LPA + govt benefits, pension",
+              "salary_senior": "₹18-22 LPA + full benefits",
+              "future": "High stability, govt pushing rural healthcare expansion",
+              "example": "The doctor treating an entire village while riding a government jeep down a road that's 40% pothole. Certified legend status. 🚑",
+              "description": "Running a Primary Health Centre or hospital ward, treating a high volume of patients, managing government health programs (vaccination drives etc.), often in rural postings initially."
+            }
+          ]
+        },
+        {
+          "id": "allied-health",
+          "name": "Allied Health Sciences",
+          "careers": [
+            {
+              "title": "Pharmacist",
+              "mode": "both",
+              "exam": "State CETs for B.Pharm, GPAT for M.Pharm",
+              "syllabus": "4-year B.Pharm: Pharmacology, Pharmaceutics, Drug chemistry",
+              "scope": "Hospitals, pharma companies, own pharmacy, govt drug regulatory bodies",
+              "salary_entry": "₹2.5-5 LPA (private), ₹4-6 LPA (govt)",
+              "salary_senior": "₹10-20 LPA (pharma industry roles)",
+              "future": "Steady demand, pharma industry growing in India",
+              "example": "Can read a doctor's handwriting that looks like an ECG report. Genuinely a superpower at this point. 💊",
+              "description": "Dispensing medicines, checking prescriptions for errors, advising patients on dosage, and managing pharmacy inventory — either in a hospital, retail pharmacy, or pharma company."
+            },
+            {
+              "title": "Nursing (B.Sc Nursing)",
+              "mode": "both",
+              "exam": "NEET or state nursing entrance exams",
+              "syllabus": "4-year B.Sc Nursing: Anatomy, patient care, clinical practice",
+              "scope": "Hospitals in India and abroad (very high international demand)",
+              "salary_entry": "₹3-5 LPA (India), much higher abroad (Gulf, UK, Australia)",
+              "salary_senior": "₹8-15 LPA (India), ₹30 LPA+ equivalent abroad",
+              "future": "Extremely high global demand, strong option for going abroad",
+              "example": "Runs on 3 hours of sleep and pure willpower, gives injections painlessly (unlike your school compounder). Also your ticket to working in London or Dubai. ✈️",
+              "description": "Direct patient care — administering medicines, monitoring vitals, assisting doctors during procedures, and providing emotional support to patients and families. Shift-based work."
+            }
+          ]
+        },
+        {
+          "id": "biotech-research",
+          "name": "Biotechnology & Research",
+          "careers": [
+            {
+              "title": "Biotechnologist / Research Scientist",
+              "mode": "both",
+              "exam": "CUET/state CETs for B.Tech/B.Sc Biotech, then CSIR-NET/GATE for research",
+              "syllabus": "Genetics, molecular biology, bioinformatics, lab techniques",
+              "scope": "Pharma R&D, govt research labs (ICMR, DBT), biotech startups",
+              "salary_entry": "₹4-8 LPA",
+              "salary_senior": "₹15-30 LPA",
+              "future": "Genomics and biotech are rapidly growing fields in India",
+              "example": "Spends 8 hours a day looking at things under a microscope that are smaller than your problems, but somehow more interesting. 🔬",
+              "description": "Lab work involving genetic engineering, cell cultures, or drug development, plus data analysis and documentation. Could be in a pharma company or a research institute."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "commerce",
+      "name": "Commerce",
+      "interests": [
+        {
+          "id": "finance-banking",
+          "name": "Finance & Banking",
+          "careers": [
+            {
+              "title": "Chartered Accountant (CA)",
+              "mode": "private",
+              "exam": "CA Foundation, Intermediate, Final (ICAI exams) + articleship",
+              "syllabus": "Accounting, Taxation, Auditing, Law, Financial Management",
+              "scope": "Own practice, corporate finance roles, Big 4 firms, CFO track",
+              "salary_entry": "₹7-12 LPA (fresh CA)",
+              "salary_senior": "₹25 LPA - ₹1 Cr+ (partners, CFOs)",
+              "future": "Always in demand, GST/taxation complexity increases need",
+              "example": "The one relative who actually understands your father's tax filing panic every March. Also has legendary 'I survived CA Final' trauma stories. 📊",
+              "description": "Auditing company accounts, filing taxes, financial planning for clients or your firm, and ensuring legal compliance. Heavy workload especially around tax filing season (March-July)."
+            },
+            {
+              "title": "Bank PO / Government Banking",
+              "mode": "government",
+              "exam": "IBPS PO, SBI PO, RBI Grade B",
+              "syllabus": "Quant, Reasoning, English, Banking Awareness, Economics (for RBI)",
+              "scope": "Public sector banks, RBI, NABARD",
+              "salary_entry": "₹8-9 LPA (incl. allowances)",
+              "salary_senior": "₹20 LPA+ at senior management level",
+              "future": "Stable career, RBI Grade B especially prestigious",
+              "example": "Stamps your passbook with the power and confidence of a Supreme Court judge. Lunch break is sacred, do not disturb. 🏦",
+              "description": "Handling customer transactions, loan approvals, managing bank branch operations, and later moving into policy/managerial roles. Regular office hours, public sector job security."
+            },
+            {
+              "title": "Investment Banker / Financial Analyst",
+              "mode": "private",
+              "exam": "B.Com/BBA + CFA or MBA Finance (via CAT/other MBA entrances)",
+              "syllabus": "Financial modeling, valuation, equity research, corporate finance",
+              "scope": "Investment banks, private equity, hedge funds, corporate finance",
+              "salary_entry": "₹8-20 LPA",
+              "salary_senior": "₹50 LPA - ₹2 Cr+ (senior banking roles)",
+              "future": "High reward, competitive, growing with India's capital markets",
+              "example": "Builds Excel sheets so complex NASA would be impressed. Sleeps 4 hours, earns like they sleep 12. 📈",
+              "description": "Building financial models, valuing companies, preparing pitch decks for mergers/acquisitions or IPOs. Extremely long hours (60-80/week common) but high pay."
+            }
+          ]
+        },
+        {
+          "id": "govt-commerce",
+          "name": "Government Services (Commerce background)",
+          "careers": [
+            {
+              "title": "SSC CGL (Various Govt Departments)",
+              "mode": "government",
+              "exam": "SSC CGL (Staff Selection Commission - Combined Graduate Level)",
+              "syllabus": "Quant, Reasoning, English, General Awareness",
+              "scope": "Income Tax dept, Central Excise, Audit, CBI, various ministries",
+              "salary_entry": "₹5-7 LPA + govt benefits",
+              "salary_senior": "₹15 LPA+ at senior grades",
+              "future": "Wide variety of postings, stable government career",
+              "example": "One exam, and suddenly you could end up literally anywhere in India — Income Tax, CBI, who knows. Life becomes an unpredictable adventure with a govt ID card. 🎲",
+              "description": "Depends entirely on the department you're posted to — could be tax assessment (Income Tax), customs inspection, or administrative work in a ministry. Desk-based government office work."
+            }
+          ]
+        },
+        {
+          "id": "business-management",
+          "name": "Business & Management",
+          "careers": [
+            {
+              "title": "Business Manager / MBA roles",
+              "mode": "private",
+              "exam": "CAT/XAT/other MBA entrance exams after BBA/B.Com",
+              "syllabus": "Marketing, Operations, HR, Strategy, Finance (2-year MBA)",
+              "scope": "Corporate management, consulting, own business/startup",
+              "salary_entry": "₹8-25 LPA (top MBA colleges)",
+              "salary_senior": "₹40 LPA - ₹1 Cr+ (leadership roles)",
+              "future": "Consulting and product management roles growing fast",
+              "example": "Turns 'let's circle back on this' into an entire career. Wears a blazer to a Zoom call from the waist up only. 💼",
+              "description": "Managing teams or projects, setting strategy, coordinating between departments, presenting to leadership. Varies hugely by industry — from FMCG brand management to tech product management."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arts-humanities",
+      "name": "Arts / Humanities",
+      "interests": [
+        {
+          "id": "civil-services",
+          "name": "Civil Services & Administration",
+          "careers": [
+            {
+              "title": "IAS / IPS / IFS (UPSC Civil Services)",
+              "mode": "government",
+              "exam": "UPSC CSE (Prelims, Mains, Interview) — any graduation stream eligible",
+              "syllabus": "General Studies, Optional subject, Essay, Current Affairs",
+              "scope": "District administration, policy making, police leadership, foreign service",
+              "salary_entry": "₹8-10 LPA + govt housing, staff, high social status",
+              "salary_senior": "₹20 LPA+ + extensive perks at Secretary level",
+              "future": "Among most prestigious careers in India, very competitive",
+              "example": "Your whole village throws a party bigger than your wedding when you clear this. Gets a govt bungalow before turning 30. Absolute chad energy. 🏛️",
+              "description": "IAS: running district administration, implementing government policy, handling law & order. IPS: leading police forces. IFS: representing India in embassies abroad. High responsibility, high visibility roles."
+            },
+            {
+              "title": "State PSC Services",
+              "mode": "government",
+              "exam": "State Public Service Commission exams (similar pattern to UPSC)",
+              "syllabus": "General studies + state-specific topics",
+              "scope": "State administrative services, state police services",
+              "salary_entry": "₹6-8 LPA + govt benefits",
+              "salary_senior": "₹15-18 LPA + benefits",
+              "future": "Good alternative to UPSC, less competition per seat",
+              "example": "Basically UPSC's cool regional cousin — same respect, slightly less insane competition. 📋",
+              "description": "Similar to IAS/IPS but at the state level — managing state government departments, local administration, or state police divisions."
+            }
+          ]
+        },
+        {
+          "id": "law",
+          "name": "Law",
+          "careers": [
+            {
+              "title": "Lawyer / Advocate",
+              "mode": "private",
+              "exam": "CLAT (for 5-year integrated LLB) or LLB after graduation",
+              "syllabus": "Constitutional law, Criminal law, Civil law, Contract law, moot courts",
+              "scope": "Litigation, corporate law firms, own practice",
+              "salary_entry": "₹5-15 LPA (top law firms), variable for litigation",
+              "salary_senior": "₹30 LPA - ₹1 Cr+ (senior advocates, partners)",
+              "future": "Corporate law and IP law are fast-growing niches",
+              "example": "Says 'objection!' in real life during family arguments. Reads contracts for fun, judges your rental agreement silently. ⚖️",
+              "description": "Representing clients in court, drafting contracts and legal documents, researching case law, and negotiating settlements. Litigation lawyers spend a lot of time in courtrooms; corporate lawyers mostly in offices."
+            },
+            {
+              "title": "Judiciary (Judge)",
+              "mode": "government",
+              "exam": "State Judicial Services Exam (after LLB)",
+              "syllabus": "Law subjects + state judicial procedures",
+              "scope": "Civil judge, district judge, career track to High Court",
+              "salary_entry": "₹6-8 LPA + govt benefits",
+              "salary_senior": "₹25 LPA+ at High Court judge level",
+              "future": "Highly respected, stable government legal career",
+              "example": "Literally 'Your Honour' now. Everyone stands up when they walk into a room. Peak respect unlocked. 👨‍⚖️",
+              "description": "Presiding over court cases, hearing arguments from both sides, studying case files, and delivering judgments based on law. Starts as a civil judge, career progresses to higher courts."
+            }
+          ]
+        },
+        {
+          "id": "design-media",
+          "name": "Design, Media & Communication",
+          "careers": [
+            {
+              "title": "UI/UX Designer",
+              "mode": "private",
+              "exam": "Portfolio-based / design college entrances (NID DAT, UCEED)",
+              "syllabus": "Design thinking, user research, prototyping tools (Figma etc.)",
+              "scope": "Tech companies, design agencies, freelancing",
+              "salary_entry": "₹4-10 LPA",
+              "salary_senior": "₹20-40 LPA (senior/lead designer)",
+              "future": "High demand as every company needs digital products",
+              "example": "Gets personally offended by a badly aligned button. Argues with developers about '2 pixels' like it's a matter of national security. 🎨",
+              "description": "Researching how users interact with an app/website, sketching wireframes, creating polished designs in tools like Figma, and testing designs with real users before handing off to developers."
+            },
+            {
+              "title": "Journalist / Mass Communication",
+              "mode": "private",
+              "exam": "University entrance exams for BA/MA Journalism & Mass Comm",
+              "syllabus": "Reporting, editing, media law, digital media production",
+              "scope": "News channels, digital media, PR, content creation",
+              "salary_entry": "₹3-6 LPA",
+              "salary_senior": "₹15-25 LPA (senior editors, anchors)",
+              "future": "Digital/content creation space growing fast alongside traditional media",
+              "example": "Shows up to a flood with a mic, standing in water up to their knees, saying 'as you can see behind me...' Absolute dedication. 🎤",
+              "description": "Researching and writing news stories, interviewing people, fact-checking, and meeting tight deadlines. Could be field reporting, desk editing, or on-camera anchoring."
+            }
+          ]
+        },
+        {
+          "id": "teaching-psychology",
+          "name": "Teaching & Psychology",
+          "careers": [
+            {
+              "title": "Government School Teacher",
+              "mode": "government",
+              "exam": "CTET/State TET + B.Ed",
+              "syllabus": "Subject knowledge + B.Ed (child psychology, pedagogy)",
+              "scope": "Government schools, job security, long vacations",
+              "salary_entry": "₹4-6 LPA",
+              "salary_senior": "₹10-14 LPA + pension",
+              "future": "Stable, consistent demand across India",
+              "example": "Can silence an entire classroom with just a look. Two months of summer vacation while you're still stuck at your desk job. Iconic. 📚",
+              "description": "Planning lessons, teaching classes, grading assignments, and managing classroom discipline. Government schools also involve some administrative and exam-invigilation duties."
+            },
+            {
+              "title": "Psychologist / Counsellor",
+              "mode": "private",
+              "exam": "BA/MA Psychology, then RCI registration for clinical practice",
+              "syllabus": "Human behavior, counseling techniques, clinical psychology",
+              "scope": "Hospitals, schools, corporate wellness, private practice",
+              "salary_entry": "₹3-6 LPA",
+              "salary_senior": "₹15-25 LPA (established private practice)",
+              "future": "Mental health awareness rising fast, growing demand",
+              "example": "Everyone's unofficial free therapist at parties, except now they actually get paid for it. 'And how does that make you feel?' 🧠",
+              "description": "One-on-one or group therapy sessions, listening to clients, developing coping strategies, and sometimes working with schools or companies on mental wellness programs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vocational-skill",
+      "name": "Vocational / Skill-Based (ITI, Diploma, Polytechnic)",
+      "interests": [
+        {
+          "id": "technical-trades",
+          "name": "Technical Trades",
+          "careers": [
+            {
+              "title": "ITI Electrician / Fitter / Mechanic",
+              "mode": "both",
+              "exam": "Direct ITI admission (after 10th) — no entrance exam, merit-based",
+              "syllabus": "2-year practical trade training: wiring, machinery, tools, safety",
+              "scope": "Factories, PSUs (via apprenticeship), private workshops, own shop, Gulf jobs",
+              "salary_entry": "₹1.5-3 LPA (fresher), higher in Gulf countries",
+              "salary_senior": "₹6-12 LPA (skilled supervisor level or own business)",
+              "future": "India's manufacturing push (Make in India) is creating huge skilled-trade demand",
+              "example": "The person your entire building calls when the inverter dies during a power cut. Genuinely a household hero, no cape needed. 🔧",
+              "description": "Hands-on technical work — wiring buildings, repairing machinery, or fixing vehicles, depending on your trade. Mostly on-site or workshop-based, practical daily tasks."
+            },
+            {
+              "title": "Polytechnic Diploma Engineer",
+              "mode": "both",
+              "exam": "State Polytechnic entrance / merit-based after 10th",
+              "syllabus": "3-year diploma: core trade subjects, practical labs, on-site training",
+              "scope": "Junior engineer roles in construction, manufacturing, or further study into B.Tech via lateral entry",
+              "salary_entry": "₹2.5-5 LPA",
+              "salary_senior": "₹10-15 LPA (with experience, or after upgrading to B.Tech)",
+              "future": "Solid fast-track option — 3 years and you're already earning, or you can upgrade later",
+              "example": "Skips the whole '4 years of theory' drama and gets hands-on way faster. The shortcut everyone wishes they knew about in 10th grade. ⚙️",
+              "description": "Assisting on construction sites or in factories under senior engineers, doing technical drawings, quality checks, and hands-on supervision of junior technical staff."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "interests": [
+        {
+          "id": "agri-science",
+          "name": "Agricultural Science & Agribusiness",
+          "careers": [
+            {
+              "title": "Agricultural Scientist (ICAR)",
+              "mode": "government",
+              "exam": "ICAR AIEEA (for B.Sc Agriculture), then ICAR-NET/ASRB for scientist roles",
+              "syllabus": "4-year B.Sc Agriculture: soil science, crop production, plant genetics",
+              "scope": "ICAR institutes, state agriculture departments, agri-research",
+              "salary_entry": "₹6-8 LPA",
+              "salary_senior": "₹18-22 LPA at senior scientist level",
+              "future": "Climate-resilient farming and food security make this increasingly critical",
+              "example": "Basically a doctor, but for crops. Diagnoses why your tomato plant looks sad and depressed. 🌾",
+              "description": "Conducting field trials on crops, researching pest-resistant seed varieties, advising farmers on best practices, and publishing agricultural research."
+            },
+            {
+              "title": "Agribusiness Manager",
+              "mode": "private",
+              "exam": "B.Sc Agriculture + MBA in Agribusiness (via CAT/state MBA entrances)",
+              "syllabus": "Farm economics, supply chain, agri-marketing, food processing",
+              "scope": "Agri companies, food processing firms, agri-tech startups",
+              "salary_entry": "₹5-10 LPA",
+              "salary_senior": "₹20-35 LPA",
+              "future": "Agri-tech and food supply chain startups booming in India right now",
+              "example": "Figures out how mangoes go from a farm in Ratnagiri to your fridge in Delhi without turning into juice on the way. Logistics wizardry. 🥭",
+              "description": "Managing supply chains from farm to market, coordinating with farmers and distributors, running agri-marketing campaigns, and handling logistics for food/agri products."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
