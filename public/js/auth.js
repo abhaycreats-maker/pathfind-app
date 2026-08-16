@@ -27,8 +27,6 @@ let app, auth, db;
 let firebaseReady = false;
 
 try {
-  // If the user hasn't filled in firebase-config.js yet, this will still "work"
-  // but auth calls will fail with a clear error — checked in initAuth().
   app = initializeApp(firebaseConfig);
   auth = getAuth(app);
   db = getFirestore(app);
@@ -61,16 +59,12 @@ export async function logIn(email, password) {
   return signInWithEmailAndPassword(auth, email, password);
 }
 
-// Uses redirect instead of popup — more reliable across browsers
-// (popups get blocked by some browsers/settings, redirect always works).
 export async function logInWithGoogle() {
   if (!firebaseReady) throw new Error("Firebase not configured. Check firebase-config.js");
   const provider = new GoogleAuthProvider();
   return signInWithRedirect(auth, provider);
 }
 
-// Call this once when the app loads — after a Google redirect sign-in,
-// the user gets sent back to your site and this picks up the result.
 export async function checkRedirectResult() {
   if (!firebaseReady) return null;
   try {
@@ -86,7 +80,6 @@ export async function logOut() {
   return signOut(auth);
 }
 
-// ---------- Firestore: save, load & delete a student's results ----------
 export async function saveResult({ streamName, interestName, mode, careers }) {
   if (!currentUser) throw new Error("Not logged in");
   return addDoc(collection(db, "savedPaths"), {
@@ -101,9 +94,6 @@ export async function saveResult({ streamName, interestName, mode, careers }) {
 
 export async function loadSavedResults() {
   if (!currentUser) throw new Error("Not logged in");
-  // Note: no orderBy here on purpose — combining where() + orderBy() on different
-  // fields needs a Firestore composite index. We sort client-side instead, which
-  // works with zero extra setup.
   const q = query(collection(db, "savedPaths"), where("uid", "==", currentUser.uid));
   const snap = await getDocs(q);
   const results = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
@@ -116,7 +106,6 @@ export async function deleteResult(id) {
   return deleteDoc(doc(db, "savedPaths", id));
 }
 
-// ---------- Firestore: feedback ----------
 export async function submitFeedback({ rating, text }) {
   return addDoc(collection(db, "feedback"), {
     uid: currentUser?.uid || "anonymous",
