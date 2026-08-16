@@ -156,7 +156,7 @@ Login is powered by **Firebase Authentication** (Google's free auth service) —
    - **Start Command:** `npm start`
    - **Instance Type:** Free
 5. Scroll down → **"Environment Variables"** section me add karo:
-   - Key: `GROQ_API_KEY`  →  Value: apni Groq key paste karo
+   - Key: `Q_API_KEY`  →  Value: apni Groq key paste karo
 6. **"Create Web Service"** click karo.
 7. 2-3 minute wait karo — Render build + deploy karega.
 8. Upar ek live URL milega jaise: `https://pathfind-app.onrender.com` — **ye tumhara live app hai!** Kisi ko bhi bhej sakte ho.
@@ -186,3 +186,4 @@ Login is powered by **Firebase Authentication** (Google's free auth service) —
 - WhatsApp share button for results
 
 Good luck bhai — is project ko live karke seedha apne resume/LinkedIn me daal dena, ekdam solid full-stack project hai 🔥
+GRO

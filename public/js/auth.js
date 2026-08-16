@@ -5,7 +5,8 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
   GoogleAuthProvider,
   signOut,
   onAuthStateChanged,
@@ -60,10 +61,25 @@ export async function logIn(email, password) {
   return signInWithEmailAndPassword(auth, email, password);
 }
 
+// Uses redirect instead of popup — more reliable across browsers
+// (popups get blocked by some browsers/settings, redirect always works).
 export async function logInWithGoogle() {
   if (!firebaseReady) throw new Error("Firebase not configured. Check firebase-config.js");
   const provider = new GoogleAuthProvider();
-  return signInWithPopup(auth, provider);
+  return signInWithRedirect(auth, provider);
+}
+
+// Call this once when the app loads — after a Google redirect sign-in,
+// the user gets sent back to your site and this picks up the result.
+export async function checkRedirectResult() {
+  if (!firebaseReady) return null;
+  try {
+    const result = await getRedirectResult(auth);
+    return result;
+  } catch (e) {
+    console.error("Redirect sign-in error:", e);
+    return null;
+  }
 }
 
 export async function logOut() {
