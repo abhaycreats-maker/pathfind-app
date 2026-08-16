@@ -10,6 +10,7 @@ import {
   loadSavedResults,
   deleteResult,
   submitFeedback,
+  checkRedirectResult,
 } from "./auth.js";
 
 const state = {
@@ -391,5 +392,15 @@ document.getElementById("feedback-submit").addEventListener("click", async () =>
   } catch (e) {
     alert("Couldn't submit — try again.");
     console.error(e);
+  }
+});
+
+// ---------- Handle Google redirect login result ----------
+checkRedirectResult().then((result) => {
+  if (result && result.user) {
+    console.log("✅ Redirect login success:", result.user.email);
+    renderAuthArea(result.user);
+  } else {
+    console.log("ℹ️ No redirect result (normal on first page load / non-Google login)");
   }
 });
