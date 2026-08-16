@@ -1,17 +1,16 @@
+// auth.js — Firebase Authentication + Firestore (save results, delete, feedback) logic
 import { firebaseConfig } from "./firebase-config.js";
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
   GoogleAuthProvider,
   signOut,
   onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
 import {
   getFirestore,
   collection,
@@ -33,17 +32,15 @@ try {
   db = getFirestore(app);
   firebaseReady = true;
 } catch (e) {
-  console.error("Firebase initialization failed:", e);
+  console.error("Firebase failed to initialize. Did you fill in firebase-config.js?", e);
 }
 
 let currentUser = null;
 
 export function initAuth(onUserChange) {
   if (!firebaseReady) return;
-
   onAuthStateChanged(auth, (user) => {
     currentUser = user;
-    console.log("Auth state:", user);
     onUserChange(user);
   });
 }
@@ -53,64 +50,38 @@ export function getCurrentUser() {
 }
 
 export async function signUp(email, password) {
-  if (!firebaseReady) {
-    throw new Error("Firebase not configured.");
-  }
-
+  if (!firebaseReady) throw new Error("Firebase not configured. Check firebase-config.js");
   return createUserWithEmailAndPassword(auth, email, password);
 }
 
 export async function logIn(email, password) {
-  if (!firebaseReady) {
-    throw new Error("Firebase not configured.");
-  }
-
+  if (!firebaseReady) throw new Error("Firebase not configured. Check firebase-config.js");
   return signInWithEmailAndPassword(auth, email, password);
 }
 
 export async function logInWithGoogle() {
-  if (!firebaseReady) {
-    throw new Error("Firebase not configured.");
-  }
-
+  if (!firebaseReady) throw new Error("Firebase not configured. Check firebase-config.js");
   const provider = new GoogleAuthProvider();
+  return signInWithRedirect(auth, provider);
+}
 
-  provider.setCustomParameters({
-    prompt: "select_account",
-  });
-
+export async function checkRedirectResult() {
+  if (!firebaseReady) return null;
   try {
-    const result = await signInWithPopup(auth, provider);
-
-    currentUser = result.user;
-
-    console.log("Google login successful:", result.user);
-
-    return result.user;
-
-  } catch (error) {
-    console.error("Google login error:", error);
-    throw error;
+    const result = await getRedirectResult(auth);
+    return result;
+  } catch (e) {
+    console.error("Redirect sign-in error:", e);
+    return null;
   }
 }
 
 export async function logOut() {
-  if (!firebaseReady) return;
-
-  await signOut(auth);
-  currentUser = null;
+  return signOut(auth);
 }
 
-export async function saveResult({
-  streamName,
-  interestName,
-  mode,
-  careers
-}) {
-  if (!currentUser) {
-    throw new Error("Not logged in");
-  }
-
+export async function saveResult({ streamName, interestName, mode, careers }) {
+  if (!currentUser) throw new Error("Not logged in");
   return addDoc(collection(db, "savedPaths"), {
     uid: currentUser.uid,
     streamName,
@@ -122,36 +93,16 @@ export async function saveResult({
 }
 
 export async function loadSavedResults() {
-  if (!currentUser) {
-    throw new Error("Not logged in");
-  }
-
-  const q = query(
-    collection(db, "savedPaths"),
-    where("uid", "==", currentUser.uid)
-  );
-
+  if (!currentUser) throw new Error("Not logged in");
+  const q = query(collection(db, "savedPaths"), where("uid", "==", currentUser.uid));
   const snap = await getDocs(q);
-
-  const results = snap.docs.map((d) => ({
-    id: d.id,
-    ...d.data(),
-  }));
-
-  results.sort(
-    (a, b) =>
-      (b.savedAt?.seconds || 0) -
-      (a.savedAt?.seconds || 0)
-  );
-
+  const results = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+  results.sort((a, b) => (b.savedAt?.seconds || 0) - (a.savedAt?.seconds || 0));
   return results;
 }
 
 export async function deleteResult(id) {
-  if (!currentUser) {
-    throw new Error("Not logged in");
-  }
-
+  if (!currentUser) throw new Error("Not logged in");
   return deleteDoc(doc(db, "savedPaths", id));
 }
 
