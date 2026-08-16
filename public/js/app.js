@@ -277,7 +277,7 @@ document.getElementById("btn-auth-submit").addEventListener("click", async () =>
   }
 });
 
-document.getElementById("btn-google").addEventListener("click", async () => {
+document.getElementById("btn-google")?.addEventListener("click", async () => {
   const errorEl = document.getElementById("auth-error");
   try {
     await logInWithGoogle();
